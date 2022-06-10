@@ -2,6 +2,7 @@ import React from "react"
 import "./App.css"
 import {Route} from "react-router"
 
+
 import Nav from "./components/nav"
 import About from "./Pages/about"
 import Details from "./Pages/details"
@@ -22,9 +23,10 @@ function App () {
       <Route path="/stocks">
         <Stocks/>
       </Route>
-      <Route path='/details'>
+      <Route path='/stocks/:details'
+      render={(routerProps) => <Stocks {...routerProps} />}
+      />
         <Details/>
-      </Route>
     </div>
   )
 }
