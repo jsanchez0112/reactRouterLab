@@ -16,10 +16,10 @@ const stocks = [
     return (
           <div className="stocks">
                 {stocks.map((usd, index) => {
-                      const {name, symbol, lastPrice} = usd;
+                      const {name, symbol } = usd;
 
                       return (
-                            <Link key={index} to={'/details/${symbol}'}>
+                            <Link key={index} to={`/stocks/${symbol}`}>
                                   <h2>{name}</h2>
                             </Link>
                       )
